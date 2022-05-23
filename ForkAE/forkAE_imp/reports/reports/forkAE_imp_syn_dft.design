@@ -1,0 +1,123 @@
+ 
+****************************************
+Report : design
+Design : forkAE_imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:57:46 2019
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    typical (File: /home/icic/Desktop/part2/FORK/forkAE_imp/db/tsmc90.db)
+
+Local Link Library:
+
+    {/home/icic/Desktop/part2/FORK/forkAE_imp/db/tsmc90.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : typical
+    Library : typical
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : hierarchy
+Design : forkAE_imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:57:46 2019
+****************************************
+
+forkAE_imp
+    ADDHX1             typical
+    AND2X1             typical
+    AND3X4             typical
+    AO22X1             typical
+    AOI2B1X1           typical
+    AOI2BB2X1          typical
+    AOI21X1            typical
+    AOI22XL            typical
+    AOI31X1            typical
+    AOI222XL           typical
+    BUFX2              typical
+    CLKINVX1           typical
+    CLKINVX3           typical
+    CLKNAND2X2         typical
+    INVX2              typical
+    INVXL              typical
+    MX2X1              typical
+    MXI2X1             typical
+    NAND2BX1           typical
+    NAND3X2            typical
+    NAND3XL            typical
+    NAND4X1            typical
+    NOR2BX1            typical
+    NOR2X1             typical
+    NOR2X2             typical
+    NOR2X4             typical
+    NOR3BX1            typical
+    NOR3X1             typical
+    NOR3X6             typical
+    NOR3X8             typical
+    NOR4X1             typical
+    OA21X1             typical
+    OAI2B2X1           typical
+    OAI2B11X1          typical
+    OAI21X1            typical
+    OAI22X1            typical
+    OAI31X1            typical
+    OAI211XL           typical
+    OAI221X1           typical
+    OR2X1              typical
+    OR2X2              typical
+    SDFFRQX2           typical
+    SDFFSQXL           typical
+    SDFFTRXL           typical
+    XNOR2X1            typical
+    XOR2X1             typical
+1

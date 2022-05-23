@@ -1,0 +1,223 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 5
+        -max_paths 5
+        -sort_by group
+Design : forkAE_imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:57:46 2019
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: Inst_forkAE_FSM_X_state_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: DONE (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_FSM_X_state_reg_0_/CK (SDFFSQXL)            0.00       0.00 r
+  Inst_forkAE_FSM_X_state_reg_0_/Q (SDFFSQXL)             0.19       0.19 r
+  U2686/Y (CLKINVX1)                                      0.11       0.30 f
+  U2683/Y (AOI21X1)                                       0.32       0.61 r
+  U2682/Y (CLKINVX1)                                      0.15       0.76 f
+  U2672/Y (CLKNAND2X2)                                    0.06       0.82 r
+  U2671/Y (OAI21X1)                                       0.03       0.85 f
+  DONE (out)                                              0.00       0.85 f
+  data arrival time                                                  0.85
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_forkAE_FSM_X_state_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: DONE (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_FSM_X_state_reg_0_/CK (SDFFSQXL)            0.00       0.00 r
+  Inst_forkAE_FSM_X_state_reg_0_/Q (SDFFSQXL)             0.19       0.19 r
+  U2686/Y (CLKINVX1)                                      0.11       0.30 f
+  U2683/Y (AOI21X1)                                       0.32       0.61 r
+  U2682/Y (CLKINVX1)                                      0.15       0.76 f
+  U2671/Y (OAI21X1)                                       0.06       0.82 r
+  DONE (out)                                              0.00       0.82 r
+  data arrival time                                                  0.82
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_forkAE_FSM_X_state_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: DONE (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_FSM_X_state_reg_1_/CK (SDFFSQXL)            0.00       0.00 r
+  Inst_forkAE_FSM_X_state_reg_1_/Q (SDFFSQXL)             0.16       0.16 f
+  U2685/Y (CLKINVX1)                                      0.05       0.21 r
+  U2684/Y (NOR2X1)                                        0.03       0.24 f
+  U2683/Y (AOI21X1)                                       0.30       0.54 r
+  U2682/Y (CLKINVX1)                                      0.15       0.69 f
+  U2672/Y (CLKNAND2X2)                                    0.06       0.75 r
+  U2671/Y (OAI21X1)                                       0.03       0.78 f
+  DONE (out)                                              0.00       0.78 f
+  data arrival time                                                  0.78
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_forkAE_FSM_X_state_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: DONE (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_FSM_X_state_reg_2_/CK (SDFFSQXL)            0.00       0.00 r
+  Inst_forkAE_FSM_X_state_reg_2_/Q (SDFFSQXL)             0.18       0.18 r
+  U2684/Y (NOR2X1)                                        0.05       0.22 f
+  U2683/Y (AOI21X1)                                       0.30       0.52 r
+  U2682/Y (CLKINVX1)                                      0.15       0.67 f
+  U2672/Y (CLKNAND2X2)                                    0.06       0.73 r
+  U2671/Y (OAI21X1)                                       0.03       0.76 f
+  DONE (out)                                              0.00       0.76 f
+  data arrival time                                                  0.76
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_forkAE_FSM_X_state_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: DONE (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_FSM_X_state_reg_1_/CK (SDFFSQXL)            0.00       0.00 r
+  Inst_forkAE_FSM_X_state_reg_1_/Q (SDFFSQXL)             0.16       0.16 f
+  U2685/Y (CLKINVX1)                                      0.05       0.21 r
+  U2684/Y (NOR2X1)                                        0.03       0.24 f
+  U2683/Y (AOI21X1)                                       0.30       0.54 r
+  U2682/Y (CLKINVX1)                                      0.15       0.69 f
+  U2671/Y (OAI21X1)                                       0.06       0.75 r
+  DONE (out)                                              0.00       0.75 r
+  data arrival time                                                  0.75
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 5
+        -max_paths 5
+        -sort_by group
+Design : forkAE_imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:57:46 2019
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: Inst_forkAE_L_Q_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: C1[4] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_L_Q_reg_4_/CK (SDFFSQXL)                    0.00       0.00 r
+  Inst_forkAE_L_Q_reg_4_/Q (SDFFSQXL)                     0.13       0.13 r
+  C1[4] (out)                                             0.00       0.13 r
+  data arrival time                                                  0.13
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_forkAE_L_Q_reg_12_
+              (rising edge-triggered flip-flop)
+  Endpoint: C1[12] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_L_Q_reg_12_/CK (SDFFSQXL)                   0.00       0.00 r
+  Inst_forkAE_L_Q_reg_12_/Q (SDFFSQXL)                    0.13       0.13 r
+  C1[12] (out)                                            0.00       0.13 r
+  data arrival time                                                  0.13
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_forkAE_L_Q_reg_40_
+              (rising edge-triggered flip-flop)
+  Endpoint: C1[40] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_L_Q_reg_40_/CK (SDFFSQXL)                   0.00       0.00 r
+  Inst_forkAE_L_Q_reg_40_/Q (SDFFSQXL)                    0.13       0.13 r
+  C1[40] (out)                                            0.00       0.13 r
+  data arrival time                                                  0.13
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_forkAE_REG_INTERNAL_STATE_Q_reg_52_
+              (rising edge-triggered flip-flop)
+  Endpoint: C0[52] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_REG_INTERNAL_STATE_Q_reg_52_/CK (SDFFSQXL)
+                                                          0.00       0.00 r
+  Inst_forkAE_REG_INTERNAL_STATE_Q_reg_52_/Q (SDFFSQXL)
+                                                          0.13       0.13 r
+  C0[52] (out)                                            0.00       0.13 r
+  data arrival time                                                  0.13
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_forkAE_REG_INTERNAL_STATE_Q_reg_60_
+              (rising edge-triggered flip-flop)
+  Endpoint: C0[60] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_forkAE_REG_INTERNAL_STATE_Q_reg_60_/CK (SDFFSQXL)
+                                                          0.00       0.00 r
+  Inst_forkAE_REG_INTERNAL_STATE_Q_reg_60_/Q (SDFFSQXL)
+                                                          0.13       0.13 r
+  C0[60] (out)                                            0.00       0.13 r
+  data arrival time                                                  0.13
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
