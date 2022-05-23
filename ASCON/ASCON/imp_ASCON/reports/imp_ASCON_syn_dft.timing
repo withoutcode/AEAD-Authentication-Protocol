@@ -1,0 +1,208 @@
+Warning: Design 'imp_ASCON' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 5
+        -max_paths 5
+        -sort_by group
+Design : imp_ASCON
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:48:06 2019
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: Inst_AEAD_u_input_ps_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: pdi_ready (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_input_ps_reg_0_/CK (SDFFSQXL)               0.00       0.00 r
+  Inst_AEAD_u_input_ps_reg_0_/Q (SDFFSQXL)                0.15       0.15 r
+  U1159/Y (CLKINVX1)                                      0.04       0.19 f
+  U1158/Y (NOR3X1)                                        0.31       0.50 r
+  U614/Y (OAI21X1)                                        0.06       0.56 f
+  U613/Y (OAI2B1X1)                                       0.02       0.59 r
+  pdi_ready (out)                                         0.00       0.59 r
+  data arrival time                                                  0.59
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_AEAD_u_input_ps_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: pdi_ready (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_input_ps_reg_2_/CK (SDFFSQXL)               0.00       0.00 r
+  Inst_AEAD_u_input_ps_reg_2_/Q (SDFFSQXL)                0.16       0.16 f
+  U1158/Y (NOR3X1)                                        0.31       0.47 r
+  U614/Y (OAI21X1)                                        0.06       0.53 f
+  U613/Y (OAI2B1X1)                                       0.02       0.56 r
+  pdi_ready (out)                                         0.00       0.56 r
+  data arrival time                                                  0.56
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_AEAD_u_input_ps_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: pdi_ready (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_input_ps_reg_1_/CK (SDFFSQXL)               0.00       0.00 r
+  Inst_AEAD_u_input_ps_reg_1_/Q (SDFFSQXL)                0.15       0.15 f
+  U1158/Y (NOR3X1)                                        0.29       0.45 r
+  U614/Y (OAI21X1)                                        0.06       0.51 f
+  U613/Y (OAI2B1X1)                                       0.02       0.54 r
+  pdi_ready (out)                                         0.00       0.54 r
+  data arrival time                                                  0.54
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_AEAD_u_cc_u_cc_ctrl_state_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: sdi_ready (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_cc_u_cc_ctrl_state_reg_0_/CK (SDFFSQXL)     0.00       0.00 r
+  Inst_AEAD_u_cc_u_cc_ctrl_state_reg_0_/Q (SDFFSQXL)      0.16       0.16 r
+  U4864/Y (CLKINVX1)                                      0.06       0.22 f
+  U3858/Y (NOR3X1)                                        0.08       0.30 r
+  U3857/Y (CLKINVX1)                                      0.08       0.39 f
+  U612/Y (OAI31X1)                                        0.06       0.45 r
+  sdi_ready (out)                                         0.00       0.45 r
+  data arrival time                                                  0.45
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_AEAD_u_cc_u_cc_ctrl_state_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: sdi_ready (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_cc_u_cc_ctrl_state_reg_2_/CK (SDFFSQXL)     0.00       0.00 r
+  Inst_AEAD_u_cc_u_cc_ctrl_state_reg_2_/Q (SDFFSQXL)      0.17       0.17 f
+  U3858/Y (NOR3X1)                                        0.08       0.25 r
+  U3857/Y (CLKINVX1)                                      0.08       0.33 f
+  U612/Y (OAI31X1)                                        0.06       0.40 r
+  sdi_ready (out)                                         0.00       0.40 r
+  data arrival time                                                  0.40
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+Warning: Design 'imp_ASCON' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 5
+        -max_paths 5
+        -sort_by group
+Design : imp_ASCON
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:48:06 2019
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: Inst_AEAD_u_output/do_data[27] (internal pin)
+  Endpoint: do_data[27]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_output/do_data[27] (PostProcessor)          0.00       0.00 r
+  do_data[27] (out)                                       0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_AEAD_u_output/do_data[28] (internal pin)
+  Endpoint: do_data[28]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_output/do_data[28] (PostProcessor)          0.00       0.00 r
+  do_data[28] (out)                                       0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_AEAD_u_output/do_data[29] (internal pin)
+  Endpoint: do_data[29]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_output/do_data[29] (PostProcessor)          0.00       0.00 r
+  do_data[29] (out)                                       0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_AEAD_u_output/do_data[30] (internal pin)
+  Endpoint: do_data[30]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_output/do_data[30] (PostProcessor)          0.00       0.00 r
+  do_data[30] (out)                                       0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Inst_AEAD_u_output/do_data[31] (internal pin)
+  Endpoint: do_data[31]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  Inst_AEAD_u_output/do_data[31] (PostProcessor)          0.00       0.00 r
+  do_data[31] (out)                                       0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

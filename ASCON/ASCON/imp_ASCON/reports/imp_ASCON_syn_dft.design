@@ -1,0 +1,152 @@
+Warning: Design 'imp_ASCON' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : design
+Design : imp_ASCON
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:48:06 2019
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    typical (File: /home/icic/Desktop/part2/ASCON/imp_ASCON/db/tsmc90.db)
+
+Local Link Library:
+
+    {/home/icic/Desktop/part2/ASCON/imp_ASCON/db/tsmc90.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : typical
+    Library : typical
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
+Warning: Design 'imp_ASCON' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : hierarchy
+Design : imp_ASCON
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:48:06 2019
+****************************************
+
+Warning: 1 unresolved references are not included in this report. (RPT-2)
+
+imp_ASCON
+    ADDHX1                typical
+    AND2X1                typical
+    AND3X1                typical
+    AO21X1                typical
+    AO22X1                typical
+    AOI2B1X1              typical
+    AOI2BB1X1             typical
+    AOI2BB2X1             typical
+    AOI21BX1              typical
+    AOI21X1               typical
+    AOI22XL               typical
+    AOI31X1               typical
+    AOI32XL               typical
+    AOI33X1               typical
+    AOI211X1              typical
+    AOI221XL              typical
+    AOI222XL              typical
+    BUFX2                 typical
+    CLKINVX1              typical
+    CLKNAND2X2            typical
+    INVX2                 typical
+    INVX4                 typical
+    INVXL                 typical
+    MX2X1                 typical
+    MXI2X1                typical
+    NAND2BX1              typical
+    NAND2BX2              typical
+    NAND2X2               typical
+    NAND2XL               typical
+    NAND3BX1              typical
+    NAND3X2               typical
+    NAND3X4               typical
+    NAND3XL               typical
+    NAND4BX1              typical
+    NAND4X1               typical
+    NOR2BX1               typical
+    NOR2X1                typical
+    NOR2X2                typical
+    NOR2X4                typical
+    NOR3BX1               typical
+    NOR3X1                typical
+    NOR3X2                typical
+    NOR4BX1               typical
+    NOR4X1                typical
+    OA21X1                typical
+    OAI2B1X1              typical
+    OAI2B2X1              typical
+    OAI2B11X1             typical
+    OAI2BB1X1             typical
+    OAI21BX1              typical
+    OAI21X1               typical
+    OAI22X1               typical
+    OAI31X1               typical
+    OAI32XL               typical
+    OAI211XL              typical
+    OAI221X1              typical
+    OAI222X1              typical
+    OR2X1                 typical
+    OR2X2                 typical
+    OR3X1                 typical
+    OR3X2                 typical
+    SDFFRQX2              typical
+    SDFFSQX4              typical
+    SDFFSQXL              typical
+    SDFFSX2               typical
+    SDFFTRXL              typical
+    SEDFFXL               typical
+    XNOR2X1               typical
+    XOR2X1                typical
+1

@@ -1,0 +1,13 @@
+Warning: Design 'imp_ASCON' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : imp_ASCON
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:48:09 2019
+****************************************
+
+This design has no violated constraints.
+
+1
