@@ -1,0 +1,314 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 5
+        -max_paths 5
+        -sort_by group
+Design : Skinny_Imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 17:01:18 2019
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: Block_Size[2]
+              (input port)
+  Endpoint: Tag1[53] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Block_Size[2] (in)                       0.00       0.00 f
+  U7423/Y (CLKNAND2X2)                     0.04       0.04 r
+  U7422/Y (CLKINVX1)                       0.05       0.09 f
+  U7421/Y (CLKNAND2X2)                     0.03       0.12 r
+  U7420/Y (CLKINVX1)                       0.06       0.18 f
+  U15/Y (NAND2X4)                          0.32       0.50 r
+  U7419/Y (CLKINVX1)                       0.10       0.60 f
+  U384/Y (BUFX2)                           0.08       0.67 f
+  U266/Y (BUFX2)                           0.09       0.76 f
+  U5/Y (NAND2X2)                           0.09       0.85 r
+  U6/Y (INVX2)                             0.12       0.96 f
+  U13/Y (NAND2X3)                          0.34       1.31 r
+  U12/Y (CLKNAND2X4)                       0.40       1.71 f
+  U10/Y (INVX2)                            0.38       2.09 r
+  U9/Y (NAND2X1)                           0.31       2.40 f
+  U8/Y (INVX2)                             0.34       2.74 r
+  U4862/Y (OAI2BB2X1)                      0.08       2.82 r
+  U4859/Y (MXI2X1)                         0.05       2.87 f
+  U4858/Y (OAI221X1)                       0.03       2.90 r
+  U4857/Y (CLKINVX1)                       0.06       2.96 f
+  U1869/Y (XOR2X1)                         0.07       3.03 r
+  U528/Y (CLKINVX1)                        0.02       3.05 f
+  Tag1[53] (out)                           0.00       3.05 f
+  data arrival time                                   3.05
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Block_Size[2]
+              (input port)
+  Endpoint: Tag2[37] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Block_Size[2] (in)                       0.00       0.00 f
+  U7423/Y (CLKNAND2X2)                     0.04       0.04 r
+  U7422/Y (CLKINVX1)                       0.05       0.09 f
+  U7421/Y (CLKNAND2X2)                     0.03       0.12 r
+  U7420/Y (CLKINVX1)                       0.06       0.18 f
+  U15/Y (NAND2X4)                          0.32       0.50 r
+  U7419/Y (CLKINVX1)                       0.10       0.60 f
+  U384/Y (BUFX2)                           0.08       0.67 f
+  U266/Y (BUFX2)                           0.09       0.76 f
+  U5/Y (NAND2X2)                           0.09       0.85 r
+  U6/Y (INVX2)                             0.12       0.96 f
+  U13/Y (NAND2X3)                          0.34       1.31 r
+  U12/Y (CLKNAND2X4)                       0.40       1.71 f
+  U10/Y (INVX2)                            0.38       2.09 r
+  U9/Y (NAND2X1)                           0.31       2.40 f
+  U8/Y (INVX2)                             0.34       2.74 r
+  U3127/Y (OAI2BB2X1)                      0.08       2.82 r
+  U3124/Y (MXI2X1)                         0.05       2.87 f
+  U3123/Y (OAI221X1)                       0.03       2.90 r
+  U3122/Y (CLKINVX1)                       0.06       2.96 f
+  U1189/Y (XOR2X1)                         0.07       3.03 r
+  U493/Y (CLKINVX1)                        0.02       3.05 f
+  Tag2[37] (out)                           0.00       3.05 f
+  data arrival time                                   3.05
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Block_Size[2]
+              (input port)
+  Endpoint: Tag2[45] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Block_Size[2] (in)                       0.00       0.00 f
+  U7423/Y (CLKNAND2X2)                     0.04       0.04 r
+  U7422/Y (CLKINVX1)                       0.05       0.09 f
+  U7421/Y (CLKNAND2X2)                     0.03       0.12 r
+  U7420/Y (CLKINVX1)                       0.06       0.18 f
+  U15/Y (NAND2X4)                          0.32       0.50 r
+  U7419/Y (CLKINVX1)                       0.10       0.60 f
+  U384/Y (BUFX2)                           0.08       0.67 f
+  U266/Y (BUFX2)                           0.09       0.76 f
+  U5/Y (NAND2X2)                           0.09       0.85 r
+  U6/Y (INVX2)                             0.12       0.96 f
+  U13/Y (NAND2X3)                          0.34       1.31 r
+  U12/Y (CLKNAND2X4)                       0.40       1.71 f
+  U10/Y (INVX2)                            0.38       2.09 r
+  U9/Y (NAND2X1)                           0.31       2.40 f
+  U8/Y (INVX2)                             0.34       2.74 r
+  U2988/Y (OAI2BB2X1)                      0.08       2.82 r
+  U2985/Y (MXI2X1)                         0.05       2.87 f
+  U2984/Y (OAI221X1)                       0.03       2.90 r
+  U2983/Y (CLKINVX1)                       0.06       2.96 f
+  U1168/Y (XOR2X1)                         0.07       3.03 r
+  U490/Y (CLKINVX1)                        0.02       3.05 f
+  Tag2[45] (out)                           0.00       3.05 f
+  data arrival time                                   3.05
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Block_Size[2]
+              (input port)
+  Endpoint: Tag2[61] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Block_Size[2] (in)                       0.00       0.00 f
+  U7423/Y (CLKNAND2X2)                     0.04       0.04 r
+  U7422/Y (CLKINVX1)                       0.05       0.09 f
+  U7421/Y (CLKNAND2X2)                     0.03       0.12 r
+  U7420/Y (CLKINVX1)                       0.06       0.18 f
+  U15/Y (NAND2X4)                          0.32       0.50 r
+  U7419/Y (CLKINVX1)                       0.10       0.60 f
+  U384/Y (BUFX2)                           0.08       0.67 f
+  U266/Y (BUFX2)                           0.09       0.76 f
+  U5/Y (NAND2X2)                           0.09       0.85 r
+  U6/Y (INVX2)                             0.12       0.96 f
+  U13/Y (NAND2X3)                          0.34       1.31 r
+  U12/Y (CLKNAND2X4)                       0.40       1.71 f
+  U10/Y (INVX2)                            0.38       2.09 r
+  U9/Y (NAND2X1)                           0.31       2.40 f
+  U8/Y (INVX2)                             0.34       2.74 r
+  U2707/Y (OAI2BB2X1)                      0.08       2.82 r
+  U2704/Y (MXI2X1)                         0.05       2.87 f
+  U2703/Y (OAI221X1)                       0.03       2.90 r
+  U2702/Y (CLKINVX1)                       0.06       2.96 f
+  U1126/Y (XOR2X1)                         0.07       3.03 r
+  U484/Y (CLKINVX1)                        0.02       3.05 f
+  Tag2[61] (out)                           0.00       3.05 f
+  data arrival time                                   3.05
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Block_Size[3]
+              (input port)
+  Endpoint: Tag1[53] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Block_Size[3] (in)                       0.00       0.00 f
+  U7423/Y (CLKNAND2X2)                     0.03       0.03 r
+  U7422/Y (CLKINVX1)                       0.05       0.08 f
+  U7421/Y (CLKNAND2X2)                     0.03       0.12 r
+  U7420/Y (CLKINVX1)                       0.06       0.18 f
+  U15/Y (NAND2X4)                          0.32       0.50 r
+  U7419/Y (CLKINVX1)                       0.10       0.60 f
+  U384/Y (BUFX2)                           0.08       0.67 f
+  U266/Y (BUFX2)                           0.09       0.76 f
+  U5/Y (NAND2X2)                           0.09       0.85 r
+  U6/Y (INVX2)                             0.12       0.96 f
+  U13/Y (NAND2X3)                          0.34       1.31 r
+  U12/Y (CLKNAND2X4)                       0.40       1.71 f
+  U10/Y (INVX2)                            0.38       2.09 r
+  U9/Y (NAND2X1)                           0.31       2.40 f
+  U8/Y (INVX2)                             0.34       2.74 r
+  U4862/Y (OAI2BB2X1)                      0.08       2.82 r
+  U4859/Y (MXI2X1)                         0.05       2.87 f
+  U4858/Y (OAI221X1)                       0.03       2.90 r
+  U4857/Y (CLKINVX1)                       0.06       2.96 f
+  U1869/Y (XOR2X1)                         0.07       3.03 r
+  U528/Y (CLKINVX1)                        0.02       3.04 f
+  Tag1[53] (out)                           0.00       3.04 f
+  data arrival time                                   3.04
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 5
+        -max_paths 5
+        -sort_by group
+Design : Skinny_Imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 17:01:18 2019
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: Input1[109]
+              (input port)
+  Endpoint: Output1[109]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Input1[109] (in)                         0.00       0.00 f
+  U5950/Y (CLKNAND2X2)                     0.01       0.01 r
+  U5936/Y (XOR2X1)                         0.02       0.03 f
+  Output1[109] (out)                       0.00       0.03 f
+  data arrival time                                   0.03
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Input1[110]
+              (input port)
+  Endpoint: Output1[110]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Input1[110] (in)                         0.00       0.00 f
+  U5915/Y (CLKNAND2X2)                     0.01       0.01 r
+  U5902/Y (XOR2X1)                         0.02       0.03 f
+  Output1[110] (out)                       0.00       0.03 f
+  data arrival time                                   0.03
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Input1[113]
+              (input port)
+  Endpoint: Output1[113]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Input1[113] (in)                         0.00       0.00 f
+  U5858/Y (CLKNAND2X2)                     0.01       0.01 r
+  U5846/Y (XOR2X1)                         0.02       0.03 f
+  Output1[113] (out)                       0.00       0.03 f
+  data arrival time                                   0.03
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Input1[117]
+              (input port)
+  Endpoint: Output1[117]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Input1[117] (in)                         0.00       0.00 f
+  U5781/Y (CLKNAND2X2)                     0.01       0.01 r
+  U5767/Y (XOR2X1)                         0.02       0.03 f
+  Output1[117] (out)                       0.00       0.03 f
+  data arrival time                                   0.03
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Input1[118]
+              (input port)
+  Endpoint: Output1[118]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Input1[118] (in)                         0.00       0.00 f
+  U5761/Y (CLKNAND2X2)                     0.01       0.01 r
+  U5748/Y (XOR2X1)                         0.02       0.03 f
+  Output1[118] (out)                       0.00       0.03 f
+  data arrival time                                   0.03
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
