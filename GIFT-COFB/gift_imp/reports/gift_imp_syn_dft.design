@@ -1,0 +1,133 @@
+ 
+****************************************
+Report : design
+Design : Skinny_Imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 17:01:18 2019
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    typical (File: /home/icic/Desktop/part2/skinny/Skinny_imp/db/tsmc90.db)
+
+Local Link Library:
+
+    {/home/icic/Desktop/part2/skinny/Skinny_imp/db/tsmc90.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : typical
+    Library : typical
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : hierarchy
+Design : Skinny_Imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 17:01:18 2019
+****************************************
+
+Skinny_Imp
+    AND2X2             typical
+    AO21X1             typical
+    AO22X1             typical
+    AOI2B1X1           typical
+    AOI2BB1X1          typical
+    AOI2BB2X1          typical
+    AOI21X1            typical
+    AOI22XL            typical
+    AOI31X1            typical
+    AOI32XL            typical
+    AOI211X1           typical
+    AOI221XL           typical
+    AOI222XL           typical
+    BUFX2              typical
+    CLKINVX1           typical
+    CLKNAND2X2         typical
+    CLKNAND2X4         typical
+    INVX2              typical
+    MX2X1              typical
+    MXI2X1             typical
+    NAND2BX1           typical
+    NAND2X1            typical
+    NAND2X2            typical
+    NAND2X3            typical
+    NAND2X4            typical
+    NAND3X2            typical
+    NAND3XL            typical
+    NOR2BX1            typical
+    NOR2X1             typical
+    NOR2X4             typical
+    NOR3BX1            typical
+    NOR3X1             typical
+    NOR4X1             typical
+    OA21X1             typical
+    OAI2B2X1           typical
+    OAI2B11X1          typical
+    OAI2B11X2          typical
+    OAI2BB2X1          typical
+    OAI21X1            typical
+    OAI22X1            typical
+    OAI32XL            typical
+    OAI33X1            typical
+    OAI211XL           typical
+    OAI221X1           typical
+    OAI222X1           typical
+    OR2X1              typical
+    OR3X1              typical
+    OR3X2              typical
+    SDFFSQX2           typical
+    SDFFSQXL           typical
+    SDFFSX2            typical
+    SDFFTRXL           typical
+    SEDFFTRX2          typical
+    TLATNX2            typical
+    XNOR2X1            typical
+    XOR2X1             typical
+1

@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 5
+        -max_paths 5
+        -sort_by group
+Design : Skinny_Imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 17:01:18 2019
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: Block_Size[2]
+              (input port)
+  Endpoint: Tag1[53] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  Block_Size[2] (in)                       0.00       0.00 f
+  U7423/Y (CLKNAND2X2)                     0.04       0.04 r
+  U7422/Y (CLKINVX1)                       0.05       0.09 f
+  U7421/Y (CLKNAND2X2)                     0.03       0.12 r
+  U7420/Y (CLKINVX1)                       0.06       0.18 f
+  U15/Y (NAND2X4)                          0.32       0.50 r
+  U7419/Y (CLKINVX1)                       0.10       0.60 f
+  U384/Y (BUFX2)                           0.08       0.67 f
+  U266/Y (BUFX2)                           0.09       0.76 f
+  U5/Y (NAND2X2)                           0.09       0.85 r
+  U6/Y (INVX2)                             0.12       0.96 f
+  U13/Y (NAND2X3)                          0.34       0.97 r
+  U12/Y (CLKNAND2X4)                       0.40       1.01 f
+  U10/Y (INVX2)                            0.38       1.05 r
+  U9/Y (NAND2X1)                           0.31       1.07 f
+  U8/Y (INVX2)                             0.34       1.10 r
+  U4862/Y (OAI2BB2X1)                      0.08       1.11 r
+  U4859/Y (MXI2X1)                         0.05       1.13 f
+  U4858/Y (OAI221X1)                       0.03       1.14 r
+  U4857/Y (CLKINVX1)                       0.06       1.18 f
+  U1869/Y (XOR2X1)                         0.07       1.20 r
+  U528/Y (CLKINVX1)                        0.02       1.25 f
+  Tag1[53] (out)                           0.00       1.27 f
+  data arrival time                                   1.27
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
