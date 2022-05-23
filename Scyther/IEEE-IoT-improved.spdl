@@ -1,0 +1,48 @@
+const XOR: Function;
+const HMAC: Function;
+const CON: Function;
+secret  IDSi;
+secret IDi;secret Ki;const Hello;
+
+macro MAC =  HMAC(Nt,CON(Nr,IDi,IDSi),Ki);
+macro c'3 = {Nt,CON(Nr,IDi,IDSi)}Ki;
+
+protocol improved( R, T) {
+
+role T {
+fresh Nt;
+var Nr;
+secret  IDSi;
+secret IDi;
+secret Ki;
+const Hello;
+	
+recv_1(R,T,Hello,Nr);
+send_2(T,R,IDSi,Nt,MAC);
+recv_3(R,T,c'3);
+
+
+claim(T, Secret, IDi);claim(T, Secret, IDSi);
+claim(T, Secret, Ki);claim(T, Alive);
+claim(T, Weakagree);
+claim(T,Niagree);
+claim(T,Nisynch);
+	};
+
+
+role R {
+fresh Nr;
+var Nt;
+secret  IDSi;
+secret IDi;secret Ki;
+const Hello;
+	
+send_1(R,T,Hello,Nr);
+recv_2(T,R,IDSi,Nt,MAC);
+send_3(R,T,c'3);
+claim(R, Secret, IDi);claim(R, Secret, IDSi);
+claim(R, Secret, Ki);claim(R, Alive);
+claim(R, Weakagree);claim(R,Niagree);claim(R,Nisynch);
+	};
+
+	}
