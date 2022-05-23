@@ -1,0 +1,1049 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version C-2009.06-SP5 for linux -- Jan 15, 2010
+              Copyright (c) 1988-2009 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+set DLIB /home/icic/Desktop/part2/FORK/forkAE_imp/db                            ;# Define the directories of library
+/home/icic/Desktop/part2/FORK/forkAE_imp/db
+set DP /home/icic/Desktop/part2/FORK/forkAE_imp                                 ;# Define the directories of project
+/home/icic/Desktop/part2/FORK/forkAE_imp
+set TOP forkAE_imp                                          ;# Top-level module name 
+forkAE_imp
+set myFiles ${DP}/src/forkAE_imp.vhd				; # list of all HDL files in the design
+/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd
+set NScan 0                                                   ;# The number of scan chain
+0
+set myClk clk                                                 ;# The name of your clock
+clk
+set virtual 1                                                 ;# 1 if virtual clock, 0 if real clock
+1
+set libFile "tsmc90.db"									  ;# Define the target_libraries
+tsmc90.db
+set myPeriod_ns 5                                             ;# desire clock period (in ns) (sets speed goal)
+5
+set search_path [concat $search_path ${DP}/src ${DLIB}]       ;# Define the search_path
+. /opt/Synopsys/DC/libraries/syn /opt/Synopsys/DC/dw/syn_ver /opt/Synopsys/DC/dw/sim_ver /home/icic/Desktop/part2/FORK/forkAE_imp/src /home/icic/Desktop/part2/FORK/forkAE_imp/db
+set target_library ${DLIB}/$libFile                           ;# Define the target_libraries
+/home/icic/Desktop/part2/FORK/forkAE_imp/db/tsmc90.db
+set link_library [concat "*" $target_library]                 ;# Define the link_libraries
+* /home/icic/Desktop/part2/FORK/forkAE_imp/db/tsmc90.db
+set runname syn                                               ;# Name appended to output files
+syn
+set dft_runname syn_dft                                       ;# Name appended to output files for scan
+syn_dft
+set exit_dc 1                                                 ;# 1 to exit DC after running, 0 to keep DC running
+1
+set verbose 0                                                 ;# 1 Write reports to screen, 0 do not write reports to screen
+0
+set myClkLatency_ns 0                                         ;# clock network latency
+0
+set myInDelay_ns 0                                            ;# delay from clock to inputs valid
+0
+set myOutDelay_ns 0                                           ;# delay from clock to output valid
+0
+set myMaxFanout  1                                            ;# max fanout load for input pins
+1
+set myFanoutLoad 8                                            ;# fanout load
+8
+set myOutputLoad 0.1                                          ;# output pin loading
+0.1
+set myInputBuf INVX1                                          ;# name of cell driving the inputs
+INVX1
+set myLoadLibrary [file rootname $target_library]             ;# name of library the cell comes from
+/home/icic/Desktop/part2/FORK/forkAE_imp/db/tsmc90
+set myLoadPin A                                               ;# name of pin that the outputs drive
+A
+set optimizeArea 0                                            ;# 1 for area, 0 for speed 
+0
+set useUltra 0                                                ;# 1 for compile_ultra, 0 for compile
+0
+# mapEffort, useUngroup are for 
+# non-ultra compile...   
+set useUngroup 1                                              ;# 0 if no flatten, 1 if flatten
+1
+set fileFormat VHDL                                        ;# Verilog or VHDL
+VHDL
+remove_design -all                                            ;# remove any other designs from design compiler's memory
+1
+define_design_lib WORK -path ${DP}/work
+1
+analyze -library WORK -format $fileFormat $myFiles            ;# Analyzer  source files
+Running PRESTO HDLC
+Compiling Package Declaration FORKSKINNYPKG
+Compiling Package Body FORKSKINNYPKG
+Compiling Entity Declaration BRANCHCONSTANT
+Compiling Architecture BEHAV of BRANCHCONSTANT
+Compiling Entity Declaration FSM_FORKSKINNY
+Compiling Architecture RTL of FSM_FORKSKINNY
+Compiling Entity Declaration SCANFF
+Compiling Architecture STRUCTURAL of SCANFF
+Compiling Entity Declaration ROUNDCONSTANTENC
+Compiling Architecture BEHAV of ROUNDCONSTANTENC
+Compiling Entity Declaration ROUNDCONSTANTENCDEC
+Compiling Architecture BEHAV of ROUNDCONSTANTENCDEC
+Compiling Entity Declaration ROUNDCONSTANTFF
+Compiling Architecture BEHAV of ROUNDCONSTANTFF
+Compiling Entity Declaration SBOX
+Compiling Architecture DATAFLOW of SBOX
+Compiling Entity Declaration SBOXINVERSE
+Compiling Architecture DATAFLOW of SBOXINVERSE
+Compiling Entity Declaration ROUNDFUNCTION
+Compiling Architecture MIXED of ROUNDFUNCTION
+Compiling Entity Declaration INVERSEROUNDFUNCTION
+Compiling Architecture MIXED of INVERSEROUNDFUNCTION
+Compiling Entity Declaration PERMUTATION
+Compiling Architecture DATAFLOW of PERMUTATION
+Compiling Entity Declaration INVERSEPERMUTATION
+Compiling Architecture DATAFLOW of INVERSEPERMUTATION
+Compiling Entity Declaration HALFPERMUTATION
+Compiling Architecture DATAFLOW of HALFPERMUTATION
+Compiling Entity Declaration INVERSEHALFPERMUTATION
+Compiling Architecture DATAFLOW of INVERSEHALFPERMUTATION
+Compiling Entity Declaration FORWARDKEYSCHEDULE
+Compiling Architecture BEHAV of FORWARDKEYSCHEDULE
+Compiling Entity Declaration INVERSEKEYSCHEDULE
+Compiling Architecture BEHAV of INVERSEKEYSCHEDULE
+Compiling Entity Declaration DECRYPTIONKEY
+Compiling Architecture BEHAV of DECRYPTIONKEY
+Compiling Entity Declaration KEYEXPANSIONFF
+Compiling Architecture MIXED of KEYEXPANSIONFF
+Compiling Entity Declaration FORKSKINNYRB
+Compiling Architecture BEHAV of FORKSKINNYRB
+Compiling Entity Declaration UP_COUNTER
+Compiling Architecture BEHAVIORAL of UP_COUNTER
+Compiling Entity Declaration REGIS
+Compiling Architecture BEHAVIORAL of REGIS
+Compiling Entity Declaration FORKAE_IMP
+Compiling Architecture STRUCTURAL of FORKAE_IMP
+Presto compilation completed successfully.
+Loading db file '/home/icic/Desktop/part2/FORK/forkAE_imp/db/tsmc90.db'
+1
+elaborate $TOP -architecture structural -library DEFAULT     ;# Elaborate source files
+Loading db file '/opt/Synopsys/DC/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/DC/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'forkAE_imp'.
+Information: Building the design 'ForkSkinnyRB' instantiated from design 'forkAE_imp' with
+	the parameters "BS=1'h0,TS=3'h4,ARCH=1'h1,PARALLEL_ENC=1'h1,INSTANCE_SPECIFIC=1'h1". (HDL-193)
+Warning:  /home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd:2736: There is a name conflict between the instance 'REG_TK2' and an existing cell. The name of the instance is being renamed to 'REG_TK2_0'. (ELAB-803)
+
+Statistics for case statements in always block at line 3043 in file
+	'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3043           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3054 in file
+	'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3054           |    auto/auto     |
+===============================================
+Warning:  /home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd:2698: Floating pin 'SE of cell REG_TK1' connected to ground. (ELAB-294)
+Presto compilation completed successfully.
+Information: Building the design 'UP_COUNTER' instantiated from design 'forkAE_imp' with
+	the parameters "datasize=64". (HDL-193)
+
+Inferred memory devices in process
+	in routine UP_COUNTER_datasize64 line 3199 in file
+		'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   counter_up_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Regis' instantiated from design 'forkAE_imp' with
+	the parameters "datasize=64". (HDL-193)
+
+Inferred memory devices in process
+	in routine Regis_datasize64 line 3229 in file
+		'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       do_reg        | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Regis' instantiated from design 'forkAE_imp' with
+	the parameters "datasize=128". (HDL-193)
+
+Inferred memory devices in process
+	in routine Regis_datasize128 line 3229 in file
+		'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       do_reg        | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FSM_ForkSkinny'. (HDL-193)
+
+Statistics for case statements in always block at line 387 in file
+	'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           390            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 437 in file
+	'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           439            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine FSM_ForkSkinny line 387 in file
+		'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ScanFF' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "SIZE=64". (HDL-193)
+
+Inferred memory devices in process
+	in routine ScanFF_SIZE64 line 557 in file
+		'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RoundConstantEncDec' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0,TS=3'h4". (HDL-193)
+
+Inferred memory devices in process
+	in routine RoundConstantEncDec_0_4 line 661 in file
+		'/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      STATE_reg      | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RoundConstantFF' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0,TS=3'h4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RoundFunction' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0,TS=3'h4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'InverseRoundFunction' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0,TS=3'h4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'BranchConstant' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ForwardKeySchedule' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0,TS=3'h4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'InverseKeySchedule' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0,TS=3'h4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DecryptionKey' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0,TS=3'h4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'KeyExpansionFF' instantiated from design 'ForkSkinnyRB_0_4_1_1_1' with
+	the parameters "BS=1'h0,TS=3'h4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'SBox' instantiated from design 'RoundFunction_0_4' with
+	the parameters "BS=1'h0". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'SBoxInverse' instantiated from design 'InverseRoundFunction_0_4' with
+	the parameters "BS=1'h0". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Permutation' instantiated from design 'ForwardKeySchedule_0_4' with
+	the parameters "BS=1'h0". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'InversePermutation' instantiated from design 'InverseKeySchedule_0_4' with
+	the parameters "BS=1'h0". (HDL-193)
+Presto compilation completed successfully.
+1
+current_design $TOP                                           ;# Set design to 'highest' module level
+Current design is 'forkAE_imp'.
+{forkAE_imp}
+link                                                          ;# Link to standard cell libraries
+
+  Linking design 'forkAE_imp'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (20 designs)              /home/icic/Desktop/part2/FORK/forkAE_imp.db, etc
+  typical (library)           /home/icic/Desktop/part2/FORK/forkAE_imp/db/tsmc90.db
+
+1
+uniquify                                                      ;# Uniquify
+Removing uniquified design 'Regis_datasize64'.
+Removing uniquified design 'ScanFF_SIZE64'.
+Removing uniquified design 'RoundFunction_0_4'.
+Removing uniquified design 'BranchConstant_0'.
+Removing uniquified design 'SBox_0'.
+Removing uniquified design 'SBoxInverse_0'.
+Removing uniquified design 'Permutation_0'.
+Removing uniquified design 'InversePermutation_0'.
+  Uniquified 2 instances of design 'Regis_datasize64'.
+  Uniquified 5 instances of design 'ScanFF_SIZE64'.
+  Uniquified 2 instances of design 'RoundFunction_0_4'.
+  Uniquified 2 instances of design 'BranchConstant_0'.
+  Uniquified 32 instances of design 'SBox_0'.
+  Uniquified 16 instances of design 'SBoxInverse_0'.
+  Uniquified 3 instances of design 'Permutation_0'.
+  Uniquified 3 instances of design 'InversePermutation_0'.
+1
+if { $useUltra == 1 } {                                       ;# Now compile the design with given mapping effort 
+    compile_ultra  -scan                                      ;# and do a second compile with incremental mapping
+} else {                                                      ;# or use the compile_ultra meta-command
+if { $useUngroup == 1 } {
+    compile -ungroup_all -map_effort medium -scan
+} else {
+    compile -map_effort medium -exact_map -scan
+}
+}
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | C-2009.06-DWBB_0912 |    *     |
+| Licensed DW Building Blocks             |                    |           |
+============================================================================
+
+
+Information: There are 896 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Regis_datasize128'
+  Processing 'Regis_datasize64_0'
+  Processing 'UP_COUNTER_datasize64'
+  Processing 'KeyExpansionFF_0_4'
+  Processing 'DecryptionKey_0_4'
+  Processing 'InversePermutation_0_0'
+  Processing 'InverseKeySchedule_0_4'
+  Processing 'Permutation_0_0'
+  Processing 'ForwardKeySchedule_0_4'
+  Processing 'BranchConstant_0_0'
+  Processing 'SBoxInverse_0_0'
+  Processing 'InverseRoundFunction_0_4'
+  Processing 'SBox_0_0'
+  Processing 'RoundFunction_0_4_0'
+  Processing 'ScanFF_SIZE64_0'
+  Processing 'RoundConstantFF_0_4'
+  Processing 'RoundConstantEncDec_0_4'
+  Processing 'FSM_ForkSkinny'
+  Processing 'ForkSkinnyRB_0_4_1_1_1'
+  Processing 'forkAE_imp'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'forkAE_imp' has no optimization constraints set. (OPT-108)
+  Ungrouping instance 'Inst_forkAE' 
+  Ungrouping instance 'Inst_lfsr' 
+  Ungrouping instance 'Inst_RegIDt' 
+  Ungrouping instance 'Inst_key' 
+  Ungrouping instance 'Inst_forkAE/FSM_X' 
+  Ungrouping instance 'Inst_forkAE/REG_INTERNAL_STATE' 
+  Ungrouping instance 'Inst_forkAE/ConstGen' 
+  Ungrouping instance 'Inst_forkAE/RC_FF_X' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X' 
+  Ungrouping instance 'Inst_forkAE/BranchConstant' 
+  Ungrouping instance 'Inst_forkAE/KS_Forward_X' 
+  Ungrouping instance 'Inst_forkAE/KS_Inverse_X' 
+  Ungrouping instance 'Inst_forkAE/KS_Decryption_Key_X' 
+  Ungrouping instance 'Inst_forkAE/KEY_FF_X' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_0' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_0' 
+  Ungrouping instance 'Inst_forkAE/KS_Forward_X/P1' 
+  Ungrouping instance 'Inst_forkAE/KS_Inverse_X/P1' 
+  Ungrouping instance 'Inst_REgIDst' 
+  Ungrouping instance 'Inst_forkAE/REG_TK2_0' 
+  Ungrouping instance 'Inst_forkAE/REG_TK2' 
+  Ungrouping instance 'Inst_forkAE/REG_TK1' 
+  Ungrouping instance 'Inst_forkAE/L' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction' 
+  Ungrouping instance 'Inst_forkAE/BranchConstant2' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_15' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_14' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_13' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_12' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_11' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_10' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_9' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_8' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_7' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_6' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_5' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_4' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_3' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_2' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_1' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction/S_0' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_15' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_14' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_13' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_12' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_11' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_10' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_9' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_8' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_7' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_6' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_5' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_4' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_3' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_2' 
+  Ungrouping instance 'Inst_forkAE/RoundFunction2_X/S_1' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_15' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_14' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_13' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_12' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_11' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_10' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_9' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_8' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_7' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_6' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_5' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_4' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_3' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_2' 
+  Ungrouping instance 'Inst_forkAE/InverseRoundFunction_X/S_1' 
+  Ungrouping instance 'Inst_forkAE/KS_Forward_X/P3' 
+  Ungrouping instance 'Inst_forkAE/KS_Forward_X/P2' 
+  Ungrouping instance 'Inst_forkAE/KS_Inverse_X/P3' 
+  Ungrouping instance 'Inst_forkAE/KS_Inverse_X/P2' 
+
+  Beginning Implementation Selection
+  ----------------------------------
+Information: The register 'Inst_key/do_reg[127]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[126]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[125]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[124]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[123]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[122]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[121]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[120]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[119]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[118]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[117]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[116]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[115]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[114]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[113]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[112]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[111]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[110]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[109]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[108]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[107]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[106]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[105]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[104]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[103]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[102]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[101]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[100]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[99]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[98]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[97]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[96]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[95]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[94]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[93]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[92]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[91]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[90]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[89]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[88]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[87]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[86]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[85]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[84]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[83]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[82]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[81]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[80]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[79]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[78]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[77]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[76]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[75]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[74]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[73]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[72]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[71]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[70]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[69]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[68]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[67]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[66]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[65]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[64]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[61]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Inst_key/do_reg[0]' will be removed. (OPT-1207)
+  Processing 'DW01_inc_width64'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'forkAE_imp'
+  Mapping 'forkAE_imp'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15   29686.7      0.00       0.0       6.2                          
+    0:00:16   21971.7      0.00       0.0       6.2                          
+    0:00:16   21971.7      0.00       0.0       6.2                          
+    0:00:16   21971.7      0.00       0.0       6.2                          
+    0:00:17   21971.7      0.00       0.0       6.2                          
+    0:00:17   21971.7      0.00       0.0       6.2                          
+    0:00:17   21983.0      0.00       0.0       3.0                          
+    0:00:17   21983.0      0.00       0.0       3.0                          
+    0:00:17   21983.0      0.00       0.0       3.0                          
+    0:00:17   21983.0      0.00       0.0       3.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:17   21983.0      0.00       0.0       3.0                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:17   21983.0      0.00       0.0       3.0                          
+    0:00:17   22007.7      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:17   22007.7      0.00       0.0       0.0                          
+    0:00:17   22007.7      0.00       0.0       0.0                          
+    0:00:17   21995.0      0.00       0.0       0.0                          
+    0:00:17   21992.8      0.00       0.0       0.0                          
+    0:00:17   21992.8      0.00       0.0       0.0                          
+    0:00:17   21992.8      0.00       0.0       0.0                          
+    0:00:17   21992.8      0.00       0.0       0.0                          
+    0:00:17   21992.8      0.00       0.0       0.0                          
+    0:00:18   21992.8      0.00       0.0       0.0                          
+    0:00:18   21992.8      0.00       0.0       0.0                          
+    0:00:18   21992.8      0.00       0.0       0.0                          
+    0:00:18   21992.8      0.00       0.0       0.0                          
+    0:00:18   21992.8      0.00       0.0       0.0                          
+Loading db file '/home/icic/Desktop/part2/FORK/forkAE_imp/db/tsmc90.db'
+
+  Optimization Complete
+  ---------------------
+1
+check_design
+Warning: In design 'forkAE_imp', input port 'key[127]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[126]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[125]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[124]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[123]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[122]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[121]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[120]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[119]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[118]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[117]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[116]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[115]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[114]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[113]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[112]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[111]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[110]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[109]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[108]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[107]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[106]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[105]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[104]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[103]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[102]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[101]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[100]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[99]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[98]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[97]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[96]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[95]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[94]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[93]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[92]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[91]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[90]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[89]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[88]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[87]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[86]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[85]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[84]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[83]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[82]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[81]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[80]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[79]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[78]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[77]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[76]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[75]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[74]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[73]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[72]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[71]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[70]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[69]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[68]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[67]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[66]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[65]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[64]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[63]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[62]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[61]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[60]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[59]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[58]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[57]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[56]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[55]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[54]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[53]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[52]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[51]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[50]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[49]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[48]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[47]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[46]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[45]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[44]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[43]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[42]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[41]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[40]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[39]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[38]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[37]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[36]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[35]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[34]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[33]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[32]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[31]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[30]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[29]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[28]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[27]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[26]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[25]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[24]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[23]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[22]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[21]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[20]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[19]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[18]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[17]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[16]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[15]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[14]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[13]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[12]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[11]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[10]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[9]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[8]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[7]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[6]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[5]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[4]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[3]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[2]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[1]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', input port 'key[0]' is unloaded. (LINT-8)
+Warning: In design 'forkAE_imp', net 'key[0]' driven by pin 'key[0]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[1]' driven by pin 'key[1]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[2]' driven by pin 'key[2]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[3]' driven by pin 'key[3]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[4]' driven by pin 'key[4]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[5]' driven by pin 'key[5]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[6]' driven by pin 'key[6]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[7]' driven by pin 'key[7]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[8]' driven by pin 'key[8]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[9]' driven by pin 'key[9]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[10]' driven by pin 'key[10]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[11]' driven by pin 'key[11]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[12]' driven by pin 'key[12]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[13]' driven by pin 'key[13]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[14]' driven by pin 'key[14]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[15]' driven by pin 'key[15]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[16]' driven by pin 'key[16]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[17]' driven by pin 'key[17]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[18]' driven by pin 'key[18]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[19]' driven by pin 'key[19]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[20]' driven by pin 'key[20]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[21]' driven by pin 'key[21]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[22]' driven by pin 'key[22]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[23]' driven by pin 'key[23]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[24]' driven by pin 'key[24]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[25]' driven by pin 'key[25]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[26]' driven by pin 'key[26]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[27]' driven by pin 'key[27]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[28]' driven by pin 'key[28]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[29]' driven by pin 'key[29]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[30]' driven by pin 'key[30]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[31]' driven by pin 'key[31]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[32]' driven by pin 'key[32]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[33]' driven by pin 'key[33]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[34]' driven by pin 'key[34]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[35]' driven by pin 'key[35]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[36]' driven by pin 'key[36]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[37]' driven by pin 'key[37]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[38]' driven by pin 'key[38]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[39]' driven by pin 'key[39]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[40]' driven by pin 'key[40]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[41]' driven by pin 'key[41]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[42]' driven by pin 'key[42]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[43]' driven by pin 'key[43]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[44]' driven by pin 'key[44]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[45]' driven by pin 'key[45]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[46]' driven by pin 'key[46]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[47]' driven by pin 'key[47]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[48]' driven by pin 'key[48]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[49]' driven by pin 'key[49]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[50]' driven by pin 'key[50]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[51]' driven by pin 'key[51]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[52]' driven by pin 'key[52]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[53]' driven by pin 'key[53]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[54]' driven by pin 'key[54]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[55]' driven by pin 'key[55]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[56]' driven by pin 'key[56]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[57]' driven by pin 'key[57]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[58]' driven by pin 'key[58]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[59]' driven by pin 'key[59]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[60]' driven by pin 'key[60]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[61]' driven by pin 'key[61]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[62]' driven by pin 'key[62]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[63]' driven by pin 'key[63]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[64]' driven by pin 'key[64]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[65]' driven by pin 'key[65]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[66]' driven by pin 'key[66]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[67]' driven by pin 'key[67]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[68]' driven by pin 'key[68]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[69]' driven by pin 'key[69]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[70]' driven by pin 'key[70]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[71]' driven by pin 'key[71]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[72]' driven by pin 'key[72]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[73]' driven by pin 'key[73]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[74]' driven by pin 'key[74]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[75]' driven by pin 'key[75]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[76]' driven by pin 'key[76]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[77]' driven by pin 'key[77]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[78]' driven by pin 'key[78]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[79]' driven by pin 'key[79]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[80]' driven by pin 'key[80]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[81]' driven by pin 'key[81]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[82]' driven by pin 'key[82]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[83]' driven by pin 'key[83]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[84]' driven by pin 'key[84]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[85]' driven by pin 'key[85]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[86]' driven by pin 'key[86]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[87]' driven by pin 'key[87]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[88]' driven by pin 'key[88]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[89]' driven by pin 'key[89]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[90]' driven by pin 'key[90]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[91]' driven by pin 'key[91]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[92]' driven by pin 'key[92]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[93]' driven by pin 'key[93]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[94]' driven by pin 'key[94]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[95]' driven by pin 'key[95]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[96]' driven by pin 'key[96]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[97]' driven by pin 'key[97]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[98]' driven by pin 'key[98]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[99]' driven by pin 'key[99]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[100]' driven by pin 'key[100]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[101]' driven by pin 'key[101]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[102]' driven by pin 'key[102]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[103]' driven by pin 'key[103]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[104]' driven by pin 'key[104]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[105]' driven by pin 'key[105]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[106]' driven by pin 'key[106]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[107]' driven by pin 'key[107]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[108]' driven by pin 'key[108]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[109]' driven by pin 'key[109]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[110]' driven by pin 'key[110]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[111]' driven by pin 'key[111]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[112]' driven by pin 'key[112]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[113]' driven by pin 'key[113]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[114]' driven by pin 'key[114]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[115]' driven by pin 'key[115]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[116]' driven by pin 'key[116]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[117]' driven by pin 'key[117]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[118]' driven by pin 'key[118]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[119]' driven by pin 'key[119]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[120]' driven by pin 'key[120]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[121]' driven by pin 'key[121]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[122]' driven by pin 'key[122]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[123]' driven by pin 'key[123]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[124]' driven by pin 'key[124]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[125]' driven by pin 'key[125]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[126]' driven by pin 'key[126]' has no loads. (LINT-2)
+Warning: In design 'forkAE_imp', net 'key[127]' driven by pin 'key[127]' has no loads. (LINT-2)
+1
+report_constraint -all_violators
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : forkAE_imp
+Version: C-2009.06-SP5
+Date   : Tue Sep 10 16:57:45 2019
+****************************************
+
+This design has no violated constraints.
+
+1
+set filebase [format "%s%s" [format "%s%s" $TOP "_"] $dft_runname]
+forkAE_imp_syn_dft
+set filename [format "%s%s%s" ${DP}/src/ $filebase ".vhd"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp_syn_dft.vhd
+redirect change_names { change_names -rules verilog -hierarchy -verbose }
+write -format verilog -hierarchy -output $filename          ;# Generate verilog code for synthesized module
+Writing verilog file '/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp_syn_dft.vhd'.
+1
+set filename [format "%s%s%s" ${DP}/src/ $filebase ".sdf"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp_syn_dft.sdf
+write_sdf -version 1.0 $filename                            ;# Generate SDF for synthesized module
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp_syn_dft.sdf'. (WT-3)
+1
+set filename [format "%s%s%s" ${DP}/src/ $filebase ".sdc"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp_syn_dft.sdc
+write_sdc $filename                                         ;# Generate SDC  for synthesized module
+1
+set filename [format "%s%s%s" ${DP}/src/ $filebase ".ddc"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp_syn_dft.ddc
+write -hierarchy -format ddc -output $filename              ;# Generate DDC  for synthesized module
+Writing ddc file '/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp_syn_dft.ddc'.
+1
+if { $verbose == 1 } {                                      ;# Generate reports for user to view 
+report_design
+report_hierarchy
+report_timing -path full -delay max -nworst 3 -significant_digits 2 -sort_by group
+report_timing -path full -delay min -nworst 3 -significant_digits 2 -sort_by group
+report_area
+report_cell 
+report_net 
+report_port -v
+report_power -analysis_effort low
+}
+# Design and Hierarchy reports
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".design"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.design
+redirect $filename { report_design }
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".design"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.design
+redirect -append $filename { report_hierarchy }
+# Timing reports
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".timing"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.timing
+redirect $filename { report_timing -path full -delay max -nworst 5 -significant_digits 2 -sort_by group 
+}
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".timing"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.timing
+redirect -append $filename { report_timing -path full -delay min -nworst 5 -significant_digits 2 -sort_by group }
+# Report_cell and report_area
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".area"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.area
+redirect $filename { report_area }
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".area"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.area
+redirect -append $filename { report_cell }
+# Report port
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".ports"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.ports
+redirect $filename { report_port -v}
+#report net
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".net"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.net
+redirect $filename { report_net }
+# report power
+set filename [format "%s%s%s" ${DP}/reports/ $filebase ".pow"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.pow
+redirect $filename { report_power -analysis_effort low }
+# report dft_drc
+set filename [format "%s%s%s"  ${DP}/reports/ $filebase ".violators"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.violators
+redirect $filename { report_constraint -all_violators }
+# report dft_drc
+set filename [format "%s%s%s"  ${DP}/reports/ $filebase ".dft_drc"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.dft_drc
+redirect $filename { dft_drc -verbose -coverage_estimate }
+# report scan path
+set filename [format "%s%s%s"  ${DP}/reports/ $filebase ".scan_path"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.scan_path
+redirect $filename { report_scan_path -view existing -chain all }
+# report cells
+set filename [format "%s%s%s"  ${DP}/reports/ $filebase ".cell"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/reports/forkAE_imp_syn_dft.cell
+redirect $filename { report_cell }
+# Write out protocol
+set filename [format "%s%s%s"  ${DP}/src/ $filebase ".spf"]
+/home/icic/Desktop/part2/FORK/forkAE_imp/src/forkAE_imp_syn_dft.spf
+write_test_protocol -output $filename
+Error: Design 'forkAE_imp' has no test model. (UIT-453)
+0
+if { $exit_dc == 1} {
+exit
+}       
+Information: Defining new variable 'filename'. (CMD-041)
+Information: Defining new variable 'myOutputLoad'. (CMD-041)
+Information: Defining new variable 'myInDelay_ns'. (CMD-041)
+Information: Defining new variable 'DLIB'. (CMD-041)
+Information: Defining new variable 'exit_dc'. (CMD-041)
+Information: Defining new variable 'myInputBuf'. (CMD-041)
+Information: Defining new variable 'virtual'. (CMD-041)
+Information: Defining new variable 'libFile'. (CMD-041)
+Information: Defining new variable 'TOP'. (CMD-041)
+Information: Defining new variable 'myMaxFanout'. (CMD-041)
+Information: Defining new variable 'myLoadPin'. (CMD-041)
+Information: Defining new variable 'filebase'. (CMD-041)
+Information: Defining new variable 'verbose'. (CMD-041)
+Information: Defining new variable 'myLoadLibrary'. (CMD-041)
+Information: Defining new variable 'NScan'. (CMD-041)
+Information: Defining new variable 'test_enable_dft_drc'. (CMD-041)
+Information: Defining new variable 'myFiles'. (CMD-041)
+Information: Defining new variable 'DP'. (CMD-041)
+Information: Defining new variable 'myFanoutLoad'. (CMD-041)
+Information: Defining new variable 'dft_runname'. (CMD-041)
+Information: Defining new variable 'useUngroup'. (CMD-041)
+Information: Defining new variable 'myClkLatency_ns'. (CMD-041)
+Information: Defining new variable 'useUltra'. (CMD-041)
+Information: Defining new variable 'myClk'. (CMD-041)
+Information: Defining new variable 'optimizeArea'. (CMD-041)
+Information: Defining new variable 'myOutDelay_ns'. (CMD-041)
+Information: Defining new variable 'fileFormat'. (CMD-041)
+Information: Defining new variable 'myPeriod_ns'. (CMD-041)
+Information: Defining new variable 'runname'. (CMD-041)
+
+Memory usage for main task 106 Mbytes.
+Memory usage for this session 106 Mbytes.
+CPU usage for this session 33 seconds ( 0.01 hours ).
+
+Thank you...
